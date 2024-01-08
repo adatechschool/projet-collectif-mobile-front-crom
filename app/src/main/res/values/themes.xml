@@ -2,19 +2,19 @@
     <!-- Base application theme. -->
 
     <!--style du background-->
-    <style name="BackgroundColor">
+    <style name="Base.Theme.BestSurfSpots" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/blue_light</item>
     </style>
 
     <!--style du texte-->
-    <style name="DefaultTextStyle">
+    <style name="DefaultTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/blue_dark</item>
         <item name="android:fontFamily">@font/karla_medium</item>
     </style>
 
     <!--style du subtitle-->
-    <style name="SubtitleTextStyle">
+    <style name="SubtitleTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/blue_medium</item>
         <item name="android:fontFamily">@font/karla_medium</item>
