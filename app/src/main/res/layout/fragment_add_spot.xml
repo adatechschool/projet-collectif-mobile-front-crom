@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/fab_margin">
+
+    <TextView
+        android:id="@+id/spot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/karla_medium"
+        android:text="@string/add_spot_page_title"
+        android:textAllCaps="true"
+        android:textColor="@color/blue_dark"
+        android:textSize="25sp"
+        android:layout_marginBottom="80dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/blue_dark"
+            android:text="@string/add_spot_page_upload_button"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:shadowDy="0"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/nazare"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:hint="@string/add_spot_page_input_name"
+        android:paddingLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"/>
+
+
+    <EditText
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:hint="@string/add_spot_page_input_place"
+        android:paddingLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cornerRadius="0dp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/blue_dark"
+        android:text="@string/add_spot_page_button_submit"
+        android:textSize="20sp"
+        android:textAllCaps="true"/>
+
+</LinearLayout>
