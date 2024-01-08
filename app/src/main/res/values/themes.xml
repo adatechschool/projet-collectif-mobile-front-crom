@@ -1,9 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.BestSurfSpots" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+
+    <!--style du background-->
+    <style name="BackgroundColor">
         <item name="android:windowBackground">@color/blue_light</item>
     </style>
 
-    <style name="Theme.BestSurfSpots" parent="Base.Theme.BestSurfSpots" />
+    <!--style du texte-->
+    <style name="DefaultTextStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue_dark</item>
+        <item name="android:fontFamily">@font/karla_medium</item>
+    </style>
+
+    <!--style du subtitle-->
+    <style name="SubtitleTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blue_medium</item>
+        <item name="android:fontFamily">@font/karla_medium</item>
+    </style>
+
+
 </resources>
