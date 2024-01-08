@@ -1,5 +1,6 @@
 <resources>
 
+    <!-- General -->
     <string name="app_name">Spots &amp; Potes</string>
     <!-- Nav-Bar -->
     <string name="navbar_home_page">Accueil</string>
