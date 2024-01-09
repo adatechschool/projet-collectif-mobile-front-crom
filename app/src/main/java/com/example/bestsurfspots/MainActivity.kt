@@ -14,7 +14,7 @@ import com.example.bestsurfspots.fragments.HomePageFragment
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFragment(HomePageFragment(), R.string.home_page_title)
+        loadFragment(HomePageFragment(this), R.string.home_page_title)
 
         // Importer navigation bar
         val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
@@ -26,7 +26,7 @@ import com.example.bestsurfspots.fragments.HomePageFragment
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.home_page -> {
-                    loadFragment(HomePageFragment(), R.string.home_page_title)
+                    loadFragment(HomePageFragment(this), R.string.home_page_title)
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> false
