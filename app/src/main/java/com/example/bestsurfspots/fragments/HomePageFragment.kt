@@ -10,6 +10,7 @@ import com.example.bestsurfspots.R
 import com.example.bestsurfspots.adapter.SpotAdapter
 
 class HomePageFragment : Fragment() {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_homepage, container, false)
 

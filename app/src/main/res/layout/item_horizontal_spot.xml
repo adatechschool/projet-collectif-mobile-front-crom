@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="150dp"
+    >
 
+    <!-- Ici on détermine l'apparence de l'image -->
     <ImageView
         android:src="@drawable/nazare"
         android:id="@+id/image_item"
-        android:layout_width="150dp"
-        android:layout_height="150dp"/>
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/detail_page_title" />
+        <TextView
+            style="@style/SubtitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/detail_page_address" />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
