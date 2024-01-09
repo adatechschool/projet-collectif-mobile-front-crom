@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.bestsurfspots.MainActivity">
+    <item
+        android:id="@+id/home_page"
+        android:title="@string/navbar_home_page"
+        android:icon="@drawable/home_page"/>
+    <item
+        android:id="@+id/favorites"
+        android:title="@string/navbar_favorites"
+        android:icon="@drawable/favorites"/>
+    <item
+        android:id="@+id/add_spot"
+        android:title="@string/navbar_add_spot"
+        android:icon="@drawable/add_spot"/>
+</menu>

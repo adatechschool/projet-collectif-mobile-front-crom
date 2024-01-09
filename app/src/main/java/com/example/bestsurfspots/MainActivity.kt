@@ -1,46 +1,49 @@
 package com.example.bestsurfspots
-
 import android.os.Bundle
-
 import androidx.appcompat.app.AppCompatActivity
-
 import android.view.Menu
-import android.view.MenuItem
-
+import androidx.fragment.app.Fragment
+import com.example.bestsurfspots.fragments.AddSpotFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.bestsurfspots.fragments.HomePageFragment
 
-class MainActivity : AppCompatActivity() {
 
+    class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        loadFragment(HomePageFragment())
+
+        // Importer navigation bar
+        val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
+        navigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId)
+            {
+                R.id.add_spot -> {
+                    loadFragment(AddSpotFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.home_page -> {
+                    loadFragment(HomePageFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> false
+            }
+        }
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        // load fragment
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, HomePageFragment())
+        transaction.replace(R.id.nav_host_fragment_content_main, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-        }
-
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
+        menuInflater.inflate(R.menu.bottom_navigation_menu, menu)
         return true
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    //override fun onSupportNavigateUp(): Boolean {
-      //  val navController = findNavController(R.id.nav_host_fragment_content_main)
-       // return navController.navigateUp(appBarConfiguration)
-          //      || super.onSupportNavigateUp()
-   // }
 }
 
