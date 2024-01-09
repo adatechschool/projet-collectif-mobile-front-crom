@@ -2,6 +2,7 @@ package com.example.bestsurfspots
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.bestsurfspots.fragments.AddSpotFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -13,7 +14,7 @@ import com.example.bestsurfspots.fragments.HomePageFragment
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFragment(HomePageFragment())
+        loadFragment(HomePageFragment(), R.string.home_page_title)
 
         // Importer navigation bar
         val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
@@ -21,11 +22,11 @@ import com.example.bestsurfspots.fragments.HomePageFragment
             when (it.itemId)
             {
                 R.id.add_spot -> {
-                    loadFragment(AddSpotFragment())
+                    loadFragment(AddSpotFragment(), R.string.add_spot_page_title)
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.home_page -> {
-                    loadFragment(HomePageFragment())
+                    loadFragment(HomePageFragment(), R.string.home_page_title)
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> false
@@ -33,7 +34,9 @@ import com.example.bestsurfspots.fragments.HomePageFragment
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
+    private fun loadFragment(fragment: Fragment, string: Int) {
+        // actualiser le titre de la page
+        findViewById<TextView>(R.id.page_title).text = resources.getString(string)
         // load fragment
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.nav_host_fragment_content_main, fragment)
