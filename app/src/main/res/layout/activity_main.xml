@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
->
+    tools:context=".MainActivity">
+
     <!-- Permet de gérer l'affichage du contenu principal en fonction de la page -->
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="82dp"
+        android:layout_height="100dp"
         android:layout_margin="@dimen/fab_margin"
         >
 
-        <!--Affiche le titre de l'app : A MODIFIER avec le logo de l'app +tard-->
-        <TextView
+        <!--logo de l'app-->
+        <ImageView
             android:id="@+id/app_name"
-            style="@style/DefaultTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_width="100dp"
+            android:layout_height="82dp"
             android:layout_marginTop="20dp"
-            android:text="@string/app_name"
-           />
+            android:src="@drawable/logo_crom"
+            android:layout_alignParentStart="true"
+            />
 
         <!--Affiche le nom de la page sur laquelle on se trouve-->
         <TextView
-            android:id="@+id/home_page_title"
+            android:id="@+id/page_title"
             style="@style/SubtitleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_alignParentEnd="true"
             android:text="@string/home_page_title"
            />
@@ -40,7 +41,7 @@
         android:id="@+id/nav_host_fragment_content_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="85dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="75dp"
         app:layout_constraintTop_toBottomOf="@+id/header"
         app:layout_constraintBottom_toTopOf="@+id/navigation_view"/>
