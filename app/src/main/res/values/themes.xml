@@ -1,15 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+    <!--style du background-->
     <style name="Base.Theme.BestSurfSpots" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your light theme here. -->
         <item name="android:windowBackground">@color/blue_light</item>
     </style>
 
-    <style name="DefaultTextStyle">
-        <item name="android:fontFamily">@font/karla_medium</item>
+    <!--style du texte-->
+    <style name="DefaultTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/blue_dark</item>
-        <item name="android:textSize">25sp</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/karla_medium</item>
     </style>
+
+    <!--style du subtitle-->
+    <style name="SubtitleTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blue_medium</item>
+        <item name="android:fontFamily">@font/karla_medium</item>
+    </style>
+
 
 </resources>

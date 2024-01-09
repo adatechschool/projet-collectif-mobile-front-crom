@@ -1,23 +1,19 @@
 package com.example.bestsurfspots
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
-import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.example.bestsurfspots.fragments.AddSpotFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
-class MainActivity : AppCompatActivity() {
-
+import com.example.bestsurfspots.fragments.HomePageFragment
 
 
-
+    class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFragment(FirstFragment())
+        loadFragment(HomePageFragment())
 
         // Importer navigation bar
         val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
@@ -29,14 +25,12 @@ class MainActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.home_page -> {
-                    loadFragment(FirstFragment())
+                    loadFragment(HomePageFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> false
             }
         }
-
-
     }
 
     private fun loadFragment(fragment: Fragment) {
@@ -51,6 +45,5 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.bottom_navigation_menu, menu)
         return true
     }
-
-
 }
+
