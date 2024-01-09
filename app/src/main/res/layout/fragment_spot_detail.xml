@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    android:layout_width="360dp"
+    android:layout_height="500dp"
+    >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/fab_margin"
+        />
 
-        <TextView
+    <TextView
             android:id="@+id/spot_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +29,7 @@
             />
 
         <TextView
-            android:id="@+id/spot_address"
+            android:id="@+id/spot_location"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,14 +40,13 @@
             app:layout_constraintTop_toBottomOf="@+id/spot_name" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/spot_image"
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/nazare"
-        app:layout_constraintTop_toBottomOf="@+id/spot_address" />
+            app:layout_constraintTop_toBottomOf="@+id/spot_location" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

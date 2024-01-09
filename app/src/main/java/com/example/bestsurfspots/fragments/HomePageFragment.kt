@@ -27,8 +27,10 @@ class HomePageFragment (
 
         //recuperer le recyclerview de SpotAdapter
         val homepageRecyclerView = view.findViewById<RecyclerView>(R.id.homepage_recycler_list)
-        homepageRecyclerView.adapter = SpotAdapter(context, spotList, R.layout.item_horizontal_spot)
+        homepageRecyclerView.adapter = SpotAdapter(context, spotList, R.layout.item_spot_list)
 
         return view
     }
+
+
 }

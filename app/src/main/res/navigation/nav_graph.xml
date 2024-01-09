@@ -9,6 +9,6 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.bestsurfspots.FirstFragment"
         android:label="page d'accueil"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_spot_detail">
     </fragment>
 </navigation>

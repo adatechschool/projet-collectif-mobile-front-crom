@@ -7,12 +7,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.bestsurfspots.DetailSpotFragment
 import com.example.bestsurfspots.MainActivity
 import com.example.bestsurfspots.R
 import com.example.bestsurfspots.SpotModel
 
 class SpotAdapter (
-    private val context: MainActivity,
+    val context: MainActivity,
     private val spotList: List<SpotModel>,
     private val layout: Int
 )
@@ -25,10 +26,10 @@ class SpotAdapter (
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // Gestion de la vue : va implémenter le layout que l'on a créé dans item_horizontal_spot
+        // Gestion de la vue : va implémenter le layout que l'on a créé dans item_spot_list
         val view = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.item_horizontal_spot, parent, false)
+            .inflate(R.layout.item_spot_list, parent, false)
 
         return ViewHolder(view)
     }
@@ -45,5 +46,11 @@ class SpotAdapter (
         Glide.with(context).load(Uri.parse(currentSpot.spotImage)).into(holder.spotImage)
         holder.spotName.text = currentSpot.spotName
         holder.spotLocation.text = currentSpot.spotLocation
+
+        // Gestion du clic sur un spot
+        holder.itemView.setOnClickListener {
+            // Création d'une instance de DetailSpotFragment et affichage
+            DetailSpotFragment(this, currentSpot).show()
+        }
     }
 }
