@@ -9,9 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.delasign.samplestarterproject.utils.ReadJSONFromAssets
 import com.example.bestsurfspots.MainActivity
 import com.example.bestsurfspots.R
-import com.example.bestsurfspots.models.SpotModel
 import com.example.bestsurfspots.adapter.SpotAdapter
-import com.example.bestsurfspots.models.UIContent
+import com.example.bestsurfspots.models.SpotsModel
 import com.google.gson.Gson
 
 class HomePageFragment (
@@ -24,7 +23,7 @@ class HomePageFragment (
 
         //lire les données au format JSON
         val JSONString = ReadJSONFromAssets(context, "sample.json")
-        val data = Gson().fromJson(JSONString, UIContent::class.java)
+        val data = Gson().fromJson(JSONString, SpotsModel::class.java)
 
 
         //fonction pour parser les données JSON et créer une liste de spots

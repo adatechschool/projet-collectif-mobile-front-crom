@@ -10,12 +10,11 @@ import com.bumptech.glide.Glide
 import com.example.bestsurfspots.DetailSpotFragment
 import com.example.bestsurfspots.MainActivity
 import com.example.bestsurfspots.R
-import com.example.bestsurfspots.models.SpotModel
-import com.example.bestsurfspots.models.UIContent
+import com.example.bestsurfspots.models.SpotsModel
 
 class SpotAdapter (
     val context: MainActivity,
-    private val spotList: List<UIContent.Spot>,
+    private val spotList: List<SpotsModel.Spot>,
     private val layout: Int
 )
     : RecyclerView.Adapter<SpotAdapter.ViewHolder> () {
@@ -44,9 +43,9 @@ class SpotAdapter (
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // La fonction va mettre à jour le modèle en fonction du spot
         val currentSpot = spotList[position]
-        Glide.with(context).load(Uri.parse(currentSpot.spotImage)).into(holder.spotImage)
-        holder.spotName.text = currentSpot.spotName
-        holder.spotLocation.text = currentSpot.spotLocation
+        Glide.with(context).load(Uri.parse(currentSpot.fields.Photos[0].url)).into(holder.spotImage)
+        holder.spotName.text = currentSpot.fields.Destination
+        holder.spotLocation.text = currentSpot.fields.Address
 
         // Gestion du clic sur un spot
         holder.itemView.setOnClickListener {
