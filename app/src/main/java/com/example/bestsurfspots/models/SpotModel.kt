@@ -1,4 +1,4 @@
-package com.example.bestsurfspots
+package com.example.bestsurfspots.models
 
 class SpotModel (
     val spotName: String = "Naoned beach",

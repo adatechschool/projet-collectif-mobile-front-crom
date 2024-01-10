@@ -10,11 +10,12 @@ import com.bumptech.glide.Glide
 import com.example.bestsurfspots.DetailSpotFragment
 import com.example.bestsurfspots.MainActivity
 import com.example.bestsurfspots.R
-import com.example.bestsurfspots.SpotModel
+import com.example.bestsurfspots.models.SpotModel
+import com.example.bestsurfspots.models.UIContent
 
 class SpotAdapter (
     val context: MainActivity,
-    private val spotList: List<SpotModel>,
+    private val spotList: List<UIContent.Spot>,
     private val layout: Int
 )
     : RecyclerView.Adapter<SpotAdapter.ViewHolder> () {

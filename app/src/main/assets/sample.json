@@ -1,0 +1,13 @@
+{
+  "records": [{
+    "spotName": "Reef Break",
+    "spotImage": "https://www.surfertoday.com/images/stories/reefbreak.jpg",
+    "spotLocation": "Pipeline, Oahu, Hawaii"
+  },
+    {
+      "spotName": "Point Break",
+      "spotImage": "https://www.surfertoday.com/images/stories/pointbreak.jpg",
+      "spotLocation": "Supertubes, Jeffreys Bay, South Africa"
+    }
+  ]
+}

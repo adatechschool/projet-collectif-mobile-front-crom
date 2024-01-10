@@ -8,10 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.bestsurfspots.adapter.SpotAdapter
+import com.example.bestsurfspots.models.SpotModel
+import com.example.bestsurfspots.models.UIContent
 
 class DetailSpotFragment (
     private val adapter: SpotAdapter,
-    private val currentSpot: SpotModel
+    private val currentSpot: UIContent.Spot
 ) : Dialog (adapter.context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
