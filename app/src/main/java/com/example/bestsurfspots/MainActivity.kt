@@ -1,5 +1,6 @@
 package com.example.bestsurfspots
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.widget.TextView
@@ -7,10 +8,19 @@ import androidx.fragment.app.Fragment
 import com.example.bestsurfspots.fragments.AddSpotFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.bestsurfspots.fragments.HomePageFragment
+import com.example.bestsurfspots.models.SpotsModel
+import com.example.bestsurfspots.utils.MyApi
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
-    class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+class MainActivity : AppCompatActivity() {
+
+
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -33,6 +43,7 @@ import com.example.bestsurfspots.fragments.HomePageFragment
             }
         }
     }
+
 
     private fun loadFragment(fragment: Fragment, string: Int) {
         // actualiser le titre de la page
