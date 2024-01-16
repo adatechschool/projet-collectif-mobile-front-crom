@@ -39,15 +39,13 @@ class HomePageFragment (
     }
 
     private fun getAllSpots() {
-        val token = "patH1YQltqqqBPsOb.c75f90282c37da83216cf1992d314275fc51bead328370a1e01a880eba479f22"
-
         val api = Retrofit.Builder()
-            .baseUrl("https://api.airtable.com/v0/")
+            .baseUrl("http://10.0.2.2:8080/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(MyApi::class.java)
 
-        api.getSpots("Bearer $token").enqueue(object : Callback<SpotsModel> {
+        api.getSpots().enqueue(object : Callback<SpotsModel> {
             override fun onResponse(call: Call<SpotsModel>, response: Response<SpotsModel>) {
                 if (response.isSuccessful) {
                     response.body()?.let {
