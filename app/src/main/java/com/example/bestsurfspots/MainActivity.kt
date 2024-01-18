@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.bestsurfspots.fragments.AddSpotFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.bestsurfspots.fragments.HomePageFragment
-import com.example.bestsurfspots.models.SpotsModel
+import com.example.bestsurfspots.models.Spot
 import com.example.bestsurfspots.utils.MyApi
 import retrofit2.Call
 import retrofit2.Callback

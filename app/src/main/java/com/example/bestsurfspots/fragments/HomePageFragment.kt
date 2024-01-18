@@ -11,7 +11,7 @@ import com.delasign.samplestarterproject.utils.ReadJSONFromAssets
 import com.example.bestsurfspots.MainActivity
 import com.example.bestsurfspots.R
 import com.example.bestsurfspots.adapter.SpotAdapter
-import com.example.bestsurfspots.models.SpotsModel
+import com.example.bestsurfspots.models.Spot
 import com.example.bestsurfspots.utils.MyApi
 import com.google.gson.Gson
 import retrofit2.Call
@@ -24,7 +24,7 @@ class HomePageFragment (
     private val context : MainActivity
 ): Fragment(
 ) {
-    private var spotList: List<SpotsModel.Spot> = emptyList()  // Initialize as an empty list
+    private var spotList: List<Spot> = emptyList()  // Initialize as an empty list
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_homepage, container, false)
 
@@ -45,18 +45,18 @@ class HomePageFragment (
             .build()
             .create(MyApi::class.java)
 
-        api.getSpots().enqueue(object : Callback<SpotsModel> {
-            override fun onResponse(call: Call<SpotsModel>, response: Response<SpotsModel>) {
+        api.getSpots().enqueue(object : Callback<List<Spot>> {
+            override fun onResponse(call: Call<List<Spot>>, response: Response<List<Spot>>) {
                 if (response.isSuccessful) {
                     response.body()?.let {
-                        spotList = it.records  // Update spotList with the response
+                        spotList = it  // Update spotList with the response
                         // Notify the adapter that the data has changed
                         updateAdapter()
                     }
                 }
             }
 
-            override fun onFailure(call: Call<SpotsModel>, t: Throwable) {
+            override fun onFailure(call: Call<List<Spot>>, t: Throwable) {
                 Log.i("Spot", "Error: ${t.message}")
             }
         })

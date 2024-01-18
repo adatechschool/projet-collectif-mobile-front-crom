@@ -8,11 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.bestsurfspots.adapter.SpotAdapter
-import com.example.bestsurfspots.models.SpotsModel
+import com.example.bestsurfspots.models.Spot
 
 class DetailSpotFragment (
     private val adapter: SpotAdapter,
-    private val currentSpot: SpotsModel.Spot
+    private val currentSpot: Spot
 ) : Dialog (adapter.context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,11 +25,11 @@ class DetailSpotFragment (
     private fun setupComponents() {
         // actualiser les informations du spot
         val spotImage = findViewById<ImageView>(R.id.spot_image)
-        Glide.with(adapter.context).load(Uri.parse(currentSpot.fields.Photos[0].url)).into(spotImage)
+        Glide.with(adapter.context).load(Uri.parse(currentSpot.PhotoURL)).into(spotImage)
         val spotName = findViewById<TextView>(R.id.spot_name)
-        spotName.text = currentSpot.fields.Destination
+        spotName.text = currentSpot.Destination
         val spotLocation = findViewById<TextView>(R.id.spot_location)
-        spotLocation.text = currentSpot.fields.Address
+        spotLocation.text = currentSpot.Address
     }
 
 
