@@ -11,6 +11,9 @@ interface MyApi {
     @GET("spots")  // Replace with the actual endpoint path
     fun getSpots() : Call<List<Spot>>
 
+    @GET("favorites")  // Replace with the actual endpoint path
+    fun getFavoritesSpots() : Call<List<Spot>>
+
     @POST("spot")
     fun addSpot(@Body spot: RequestBody) : Call<Spot>
 

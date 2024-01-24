@@ -10,6 +10,9 @@
     <!-- Home Page -->
     <string name="home_page_title">À DÉCOUVRIR</string>
 
+    <!-- Favorites Page -->
+    <string name="favorites_page_title">VOS SPOTS PRÉFÉRÉS</string>
+
     <!-- Detail Page -->
     <string name="detail_page_title">
     <!-- Variable --> Nom du spot

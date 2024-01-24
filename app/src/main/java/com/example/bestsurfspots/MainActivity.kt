@@ -6,6 +6,7 @@ import android.view.Menu
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.bestsurfspots.fragments.AddSpotFragment
+import com.example.bestsurfspots.fragments.FavoritesFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.bestsurfspots.fragments.HomePageFragment
 import com.example.bestsurfspots.models.Spot
@@ -33,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             {
                 R.id.add_spot -> {
                     loadFragment(AddSpotFragment(), R.string.add_spot_page_title)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.favorites -> {
+                    loadFragment(FavoritesFragment(this), R.string.favorites_page_title)
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.home_page -> {
