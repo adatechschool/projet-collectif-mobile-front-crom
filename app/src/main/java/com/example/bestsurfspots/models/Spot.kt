@@ -6,3 +6,6 @@ package com.example.bestsurfspots.models
             val PhotoURL : String,
             val Address : String
     )
+    {
+
+        }

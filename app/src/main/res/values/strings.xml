@@ -21,6 +21,7 @@
     <!-- Add Spot Page -->
     <string name="add_spot_page_title">AJOUTER UN SPOT</string>
     <string name="add_spot_page_upload_button">Charger l\'image</string>
+    <string name="add_spot_page_input_imageURL">URL de l\'image</string>
     <string name="add_spot_page_input_name">Nom du spot</string>
     <string name="add_spot_page_input_place">Lieu</string>
     <string name="add_spot_page_button_submit">Valider</string>
