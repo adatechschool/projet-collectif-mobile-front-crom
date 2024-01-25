@@ -49,9 +49,11 @@ class AddSpotFragment : Fragment() {
 
         // les mettre dans un objet Spot en format json
         val spot = Spot(
-            destination?.text.toString(),
-            photoURL?.text.toString(),
-            address?.text.toString()
+            ID = "",  // Laisser l'ID vide s'il est généré côté serveur
+            Destination = destination?.text.toString(),
+            PhotoURL = photoURL?.text.toString(),
+            Address = address?.text.toString(),
+            Favorites = false  // Vous pouvez initialiser Favorites à une valeur par défaut si nécessaire
         )
 
         val json = Gson().toJson(spot)
