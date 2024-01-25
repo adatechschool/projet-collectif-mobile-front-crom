@@ -8,3 +8,4 @@ package com.example.bestsurfspots.models
             val Address : String,
             val Favorites : Boolean,
     )
+

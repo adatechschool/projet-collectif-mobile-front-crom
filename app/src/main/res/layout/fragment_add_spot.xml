@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.bestsurfspots.MainActivity"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/fab_margin">
 
-    <LinearLayout
+<!--    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -27,9 +29,10 @@
             android:src="@drawable/nazare"
             />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <EditText
+        android:id="@+id/add_spot_page_input_destination"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:hint="@string/add_spot_page_input_name"
@@ -38,13 +41,23 @@
 
 
     <EditText
+        android:id="@+id/add_spot_page_input_address"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:hint="@string/add_spot_page_input_place"
         android:paddingLeft="@dimen/fab_margin"
         android:layout_marginTop="@dimen/fab_margin"/>
 
+    <EditText
+        android:id="@+id/add_spot_page_input_photoURL"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:hint="@string/add_spot_page_input_imageURL"
+        android:paddingLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"/>
+
     <Button
+        android:id="@+id/add_spot_page_button_submit"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="@dimen/fab_margin"
